@@ -51,7 +51,7 @@ const PaymentForm = () => {
       },
     });
 
-    console.log(JSON.stringify(paymentResult));
+    //  console.log(JSON.stringify(paymentResult));
 
     setIsPaymentProcessing(false);
     if (paymentResult.error) {

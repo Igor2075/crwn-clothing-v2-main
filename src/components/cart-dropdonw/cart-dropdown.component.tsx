@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { selectCartItems } from "../../store/cart/cart.selector";
 import Button from "../button/button.component";
 import CartItem from "../cart-item/cart-item.component";
-import { CartDropownContainer, EmptyMessage, CartItems } from "./cart-dropdown.styles";
+import { CartDropdownContainer, EmptyMessage, CartItems } from "./cart-dropdown.styles";
 
 const CartDropDown = () => {
   const cartItems = useSelector(selectCartItems);
@@ -12,7 +12,7 @@ const CartDropDown = () => {
     navigate("/checkout");
   };
   return (
-    <CartDropownContainer>
+    <CartDropdownContainer>
       <CartItems>
         {cartItems.length ? (
           cartItems.map((item) => <CartItem key={item.id} cartItem={item} />)
@@ -21,7 +21,7 @@ const CartDropDown = () => {
         )}
       </CartItems>
       <Button onClick={goToCheckoutHandler}>Checkout</Button>
-    </CartDropownContainer>
+    </CartDropdownContainer>
   );
 };
 

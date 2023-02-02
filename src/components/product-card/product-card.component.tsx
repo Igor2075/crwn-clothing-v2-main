@@ -23,7 +23,7 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
         <Price>${price}</Price>
       </Footer>
       <Button buttonType={BUTTON_TYPES_CLASSES.inverted} onClick={addProductToCard}>
-        Add to card
+        Add
       </Button>
     </ProductCardContainer>
   );
